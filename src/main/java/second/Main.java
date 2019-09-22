@@ -20,11 +20,11 @@ public class Main {
         }
     }
 
-    private static int convertNegativeToPositive(int negativeNumber){
+    public static int convertNegativeToPositive(int negativeNumber){
         return addNumbers(~negativeNumber, 1);
     }
 
-    private static int addNumbers(int x, int y) {
+    public static int addNumbers(int x, int y) {
         return y == 0 ? x :
                 addNumbers(x^y,(x&y)<<1);
     }
