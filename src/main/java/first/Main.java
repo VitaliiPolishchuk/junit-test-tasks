@@ -19,8 +19,9 @@ public class Main {
         }
     }
 
-    private static boolean isValidBinaryNumber(String binaryNumber) {
-        if (binaryNumber.length() > Integer.SIZE) return false;
+    public static boolean isValidBinaryNumber(String binaryNumber) {
+        if (binaryNumber.length() > Integer.SIZE ||
+                binaryNumber.length() == 0) return false;
         for (int i = 0; i < binaryNumber.length(); ++i) {
             if (binaryNumber.charAt(i) != '0' &&
                     binaryNumber.charAt(i) != '1') {
@@ -30,7 +31,7 @@ public class Main {
         return true;
     }
 
-    private static int convertBinaryToDecimal(String binaryNumber){
+    public static int convertBinaryToDecimal(String binaryNumber){
         int res = 0, n = binaryNumber.length();
         for (int i = 0; i < n; ++i) {
             if (binaryNumber.charAt(i) == '1') {
